@@ -202,6 +202,15 @@
             background-color: #f5f5f5;
             border-radius: 4px;
         }
+        
+        .multilingual-note {
+            background-color: #E6F7FF;
+            padding: 8px;
+            border-left: 4px solid #00008B;
+            margin: 10px 0;
+            font-style: italic;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -211,7 +220,7 @@
             <ul class="tabs">
                 <li><button class="tab active" data-tab="section1">Group Member Info</button></li>
                 <li><button class="tab" data-tab="section2">Shared Theme</button></li>
-                <li><button class="tab" data-tab="section3">Article Summaries</button></li>
+                <li><button class="tab" data-tab="section3">Source Summaries</button></li>
                 <li><button class="tab" data-tab="section4">Comparative Analysis</button></li>
                 <li><button class="tab" data-tab="section5">Perspectives</button></li>
                 <li><button class="tab" data-tab="section6">Argumentation</button></li>
@@ -227,6 +236,7 @@
             <div id="section1" class="tab-content active">
                 <h3>SECTION 1: GROUP MEMBER INFORMATION</h3>
                 <p class="section-note">Please fill in details for all group members (3-5 members)</p>
+                <p class="multilingual-note">Multilingual notetaking encouraged - feel free to use your preferred language for notes</p>
                 <table>
                     <thead>
                         <tr>
@@ -273,25 +283,27 @@
             
             <div id="section2" class="tab-content">
                 <h3>SECTION 2: SHARED THEME</h3>
+                <p class="multilingual-note">Multilingual notetaking encouraged - feel free to use your preferred language for notes</p>
                 <p><strong>Theme Title:</strong></p>
                 <input type="text" name="themeTitle" placeholder="Enter theme title">
                 
-                <p class="section-note">Explain how your group's articles connect to this theme and why it matters</p>
-                <textarea name="whyTheme" rows="4" placeholder="Explain how your group’s articles connect to this theme and why it matters..."></textarea>
+                <p class="section-note">Explain how your group's materials connect to this theme and why it matters</p>
+                <textarea name="whyTheme" rows="4" placeholder="Explain how your group's materials connect to this theme and why it matters..."></textarea>
             </div>
             
             <div id="section3" class="tab-content">
-                <h3>SECTION 3: INDIVIDUAL ARTICLE SUMMARIES</h3>
+                <h3>SECTION 3: INDIVIDUAL SOURCE SUMMARIES</h3>
+                <p class="multilingual-note">Multilingual notetaking encouraged - feel free to use your preferred language for notes</p>
                 <p class="section-note">For each member, fill in details below</p>
                 
                 <div class="member-section">
                     <h4>Member 1</h4>
                     <p><strong>Member Name:</strong></p>
                     <input type="text" name="member1Name" placeholder="Member Name">
-                    <p><strong>Article Title:</strong></p>
-                    <input type="text" name="articleTitle1" placeholder="Article Title">
-                    <p><strong>Author(s)/Source:</strong></p>
-                    <input type="text" name="author1" placeholder="Author(s)/Source">
+                    <p><strong>Source Title:</strong></p>
+                    <input type="text" name="sourceTitle1" placeholder="Source Title">
+                    <p><strong>Creator/Source:</strong></p>
+                    <input type="text" name="creator1" placeholder="Creator/Source">
                     <p><strong>Main Argument/Key Points:</strong></p>
                     <textarea name="keyPoints1" rows="3" placeholder="Main Argument/Key Points..."></textarea>
                     <p><strong>Connection to Shared Theme:</strong></p>
@@ -302,10 +314,10 @@
                     <h4>Member 2</h4>
                     <p><strong>Member Name:</strong></p>
                     <input type="text" name="member2Name" placeholder="Member Name">
-                    <p><strong>Article Title:</strong></p>
-                    <input type="text" name="articleTitle2" placeholder="Article Title">
-                    <p><strong>Author(s)/Source:</strong></p>
-                    <input type="text" name="author2" placeholder="Author(s)/Source">
+                    <p><strong>Source Title:</strong></p>
+                    <input type="text" name="sourceTitle2" placeholder="Source Title">
+                    <p><strong>Creator/Source:</strong></p>
+                    <input type="text" name="creator2" placeholder="Creator/Source">
                     <p><strong>Main Argument/Key Points:</strong></p>
                     <textarea name="keyPoints2" rows="3" placeholder="Main Argument/Key Points..."></textarea>
                     <p><strong>Connection to Shared Theme:</strong></p>
@@ -316,10 +328,10 @@
                     <h4>Member 3</h4>
                     <p><strong>Member Name:</strong></p>
                     <input type="text" name="member3Name" placeholder="Member Name">
-                    <p><strong>Article Title:</strong></p>
-                    <input type="text" name="articleTitle3" placeholder="Article Title">
-                    <p><strong>Author(s)/Source:</strong></p>
-                    <input type="text" name="author3" placeholder="Author(s)/Source">
+                    <p><strong>Source Title:</strong></p>
+                    <input type="text" name="sourceTitle3" placeholder="Source Title">
+                    <p><strong>Creator/Source:</strong></p>
+                    <input type="text" name="creator3" placeholder="Creator/Source">
                     <p><strong>Main Argument/Key Points:</strong></p>
                     <textarea name="keyPoints3" rows="3" placeholder="Main Argument/Key Points..."></textarea>
                     <p><strong>Connection to Shared Theme:</strong></p>
@@ -330,10 +342,10 @@
                     <h4>Member 4</h4>
                     <p><strong>Member Name:</strong></p>
                     <input type="text" name="member4Name" placeholder="Member Name">
-                    <p><strong>Article Title:</strong></p>
-                    <input type="text" name="articleTitle4" placeholder="Article Title">
-                    <p><strong>Author(s)/Source:</strong></p>
-                    <input type="text" name="author4" placeholder="Author(s)/Source">
+                    <p><strong>Source Title:</strong></p>
+                    <input type="text" name="sourceTitle4" placeholder="Source Title">
+                    <p><strong>Creator/Source:</strong></p>
+                    <input type="text" name="creator4" placeholder="Creator/Source">
                     <p><strong>Main Argument/Key Points:</strong></p>
                     <textarea name="keyPoints4" rows="3" placeholder="Main Argument/Key Points..."></textarea>
                     <p><strong>Connection to Shared Theme:</strong></p>
@@ -344,10 +356,10 @@
                     <h4>Member 5</h4>
                     <p><strong>Member Name:</strong></p>
                     <input type="text" name="member5Name" placeholder="Member Name">
-                    <p><strong>Article Title:</strong></p>
-                    <input type="text" name="articleTitle5" placeholder="Article Title">
-                    <p><strong>Author(s)/Source:</strong></p>
-                    <input type="text" name="author5" placeholder="Author(s)/Source">
+                    <p><strong>Source Title:</strong></p>
+                    <input type="text" name="sourceTitle5" placeholder="Source Title">
+                    <p><strong>Creator/Source:</strong></p>
+                    <input type="text" name="creator5" placeholder="Creator/Source">
                     <p><strong>Main Argument/Key Points:</strong></p>
                     <textarea name="keyPoints5" rows="3" placeholder="Main Argument/Key Points..."></textarea>
                     <p><strong>Connection to Shared Theme:</strong></p>
@@ -357,13 +369,14 @@
             
             <div id="section4" class="tab-content">
                 <h3>SECTION 4: COMPARATIVE ANALYSIS</h3>
-                <p><strong>How do articles OVERLAP?</strong></p>
+                <p class="multilingual-note">Multilingual notetaking encouraged - feel free to use your preferred language for notes</p>
+                <p><strong>How do sources OVERLAP?</strong></p>
                 <p class="section-note">e.g., shared evidence, similar conclusions, common methodologies</p>
-                <textarea name="overlap" rows="4" placeholder="How do articles overlap?..."></textarea>
+                <textarea name="overlap" rows="4" placeholder="How do sources overlap?..."></textarea>
                 
-                <p><strong>How do articles DIVERGE?</strong></p>
+                <p><strong>How do sources DIVERGE?</strong></p>
                 <p class="section-note">e.g., conflicting evidence, different perspectives, unique approaches</p>
-                <textarea name="diverge" rows="4" placeholder="How do articles diverge?..."></textarea>
+                <textarea name="diverge" rows="4" placeholder="How do sources diverge?..."></textarea>
                 
                 <p><strong>Key Similarities/Differences Summary:</strong></p>
                 <table>
@@ -396,8 +409,9 @@
             
             <div id="section5" class="tab-content">
                 <h3>SECTION 5: PERSONAL, CULTURAL & DISCIPLINARY PERSPECTIVES</h3>
+                <p class="multilingual-note">Multilingual notetaking encouraged - feel free to use your preferred language for notes</p>
                 <p><strong>How does each member's background shape their interpretation?</strong></p>
-                <p class="section-note">e.g., "As a sociology student, I focus on systemic inequalities in Article X; as a Nigerian, I noticed cultural nuances in Article Y"</p>
+                <p class="section-note">e.g., "As a sociology student, I focus on systemic inequalities in Source X; as a Nigerian, I noticed cultural nuances in Source Y"</p>
                 
                 <table>
                     <thead>
@@ -448,11 +462,12 @@
             
             <div id="section6" class="tab-content">
                 <h3>SECTION 6: ARGUMENTATION & RHETORICAL STRATEGIES</h3>
-                <p><strong>Compare how each article builds its argument:</strong></p>
+                <p class="multilingual-note">Multilingual notetaking encouraged - feel free to use your preferred language for notes</p>
+                <p><strong>Compare how each source builds its argument:</strong></p>
                 <table>
                     <thead>
                         <tr>
-                            <th>Article</th>
+                            <th>Source</th>
                             <th>Evidence Type</th>
                             <th>Persuasive Techniques</th>
                             <th>Effectiveness</th>
@@ -460,31 +475,31 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input type="text" name="article1" placeholder="Article Title"></td>
+                            <td><input type="text" name="source1" placeholder="Source Title"></td>
                             <td><input type="text" name="evidenceType1" placeholder="Data, anecdotes, expert quotes"></td>
                             <td><input type="text" name="techniques1" placeholder="Emotional appeal, logic, credibility"></td>
                             <td><input type="text" name="effectiveness1" placeholder="High/Medium/Low"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="article2" placeholder="Article Title"></td>
+                            <td><input type="text" name="source2" placeholder="Source Title"></td>
                             <td><input type="text" name="evidenceType2" placeholder="Data, anecdotes, expert quotes"></td>
                             <td><input type="text" name="techniques2" placeholder="Emotional appeal, logic, credibility"></td>
                             <td><input type="text" name="effectiveness2" placeholder="High/Medium/Low"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="article3" placeholder="Article Title"></td>
+                            <td><input type="text" name="source3" placeholder="Source Title"></td>
                             <td><input type="text" name="evidenceType3" placeholder="Data, anecdotes, expert quotes"></td>
                             <td><input type="text" name="techniques3" placeholder="Emotional appeal, logic, credibility"></td>
                             <td><input type="text" name="effectiveness3" placeholder="High/Medium/Low"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="article4" placeholder="Article Title"></td>
+                            <td><input type="text" name="source4" placeholder="Source Title"></td>
                             <td><input type="text" name="evidenceType4" placeholder="Data, anecdotes, expert quotes"></td>
                             <td><input type="text" name="techniques4" placeholder="Emotional appeal, logic, credibility"></td>
                             <td><input type="text" name="effectiveness4" placeholder="High/Medium/Low"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="article5" placeholder="Article Title"></td>
+                            <td><input type="text" name="source5" placeholder="Source Title"></td>
                             <td><input type="text" name="evidenceType5" placeholder="Data, anecdotes, expert quotes"></td>
                             <td><input type="text" name="techniques5" placeholder="Emotional appeal, logic, credibility"></td>
                             <td><input type="text" name="effectiveness5" placeholder="High/Medium/Low"></td>
@@ -498,9 +513,10 @@
             
             <div id="section7" class="tab-content">
                 <h3>SECTION 7: GENAI IMAGE & TRANSLANGUAGING</h3>
+                <p class="multilingual-note">Multilingual notetaking encouraged - feel free to use your preferred language for notes</p>
                 <p><strong>GenAI Image Prompt:</strong></p>
-                <p class="section-note">Be specific! Include style, colors, symbols, and theme relevance.</p>
-                <textarea name="genAIPrompt" rows="4" placeholder="Example: 'A minimalist infographic showing interconnected puzzle pieces in blue and gold, labeled 'Trust,' 'Corruption,' and 'Social Justice,' with a globe in the center. Digital art style.'"></textarea>
+                <p class="section-note">Be specific! Include style, colours, symbols, and theme relevance.</p>
+                <textarea name="genAIPrompt" rows="4" placeholder="Example: 'A minimalist infographic showing interconnected puzzle pieces in blue and gold, labeled 'Trust,' 'Corruption,' and 'Social Justice,' with a globe in the centre. Digital art style.'"></textarea>
                 
                 <p><strong>Image Description & Theme Connection:</strong></p>
                 <textarea name="imageDesc" rows="3" placeholder="Describe the image and how it connects to the theme..."></textarea>
@@ -518,6 +534,7 @@
             
             <div id="section8" class="tab-content">
                 <h3>SECTION 8: PRESENTATION STRUCTURE OUTLINE</h3>
+                <p class="multilingual-note">Multilingual notetaking encouraged - feel free to use your preferred language for notes</p>
                 <p class="section-note">Plan slide-by-slide content. Final slide MUST be references.</p>
                 <table>
                     <thead>
@@ -543,7 +560,7 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td><input type="text" name="slide3Content" placeholder="Article summaries (1 slide per article)"></td>
+                            <td><input type="text" name="slide3Content" placeholder="Source summaries (1 slide per source)"></td>
                             <td><input type="text" name="slide3Time" placeholder="2 min"></td>
                             <td><input type="text" name="slide3Presenters" placeholder="[Names]"></td>
                         </tr>
@@ -596,6 +613,7 @@
             
             <div id="section9" class="tab-content">
                 <h3>SECTION 9: SUBMISSION CHECKLIST</h3>
+                <p class="multilingual-note">Multilingual notetaking encouraged - feel free to use your preferred language for notes</p>
                 <ul>
                     <li><input type="checkbox" name="check1"> PowerPoint outline submitted to ClickUP before deadline</li>
                     <li><input type="checkbox" name="check2"> Presentation recorded (≤10 minutes)</li>
@@ -680,19 +698,19 @@
             text += `Why this theme: ${document.querySelector('[name="whyTheme"]').value}\n`;
             
             // Section 3
-            text += "\nSECTION 3: INDIVIDUAL ARTICLE SUMMARIES\n";
+            text += "\nSECTION 3: INDIVIDUAL SOURCE SUMMARIES\n";
             for (let i = 1; i <= 5; i++) {
                 const memberName = document.querySelector(`[name="member${i}Name"]`).value;
-                const articleTitle = document.querySelector(`[name="articleTitle${i}"]`).value;
-                const author = document.querySelector(`[name="author${i}"]`).value;
+                const sourceTitle = document.querySelector(`[name="sourceTitle${i}"]`).value;
+                const creator = document.querySelector(`[name="creator${i}"]`).value;
                 const keyPoints = document.querySelector(`[name="keyPoints${i}"]`).value;
                 const themeConn = document.querySelector(`[name="themeConn${i}"]`).value;
                 
-                if (memberName || articleTitle || author || keyPoints || themeConn) {
+                if (memberName || sourceTitle || creator || keyPoints || themeConn) {
                     text += `\nMember ${i}:\n`;
                     text += `Member Name: ${memberName}\n`;
-                    text += `Article Title: ${articleTitle}\n`;
-                    text += `Author(s)/Source: ${author}\n`;
+                    text += `Source Title: ${sourceTitle}\n`;
+                    text += `Creator/Source: ${creator}\n`;
                     text += `Main Argument/Key Points: ${keyPoints}\n`;
                     text += `Connection to Shared Theme: ${themeConn}\n`;
                 }
@@ -700,8 +718,8 @@
             
             // Section 4
             text += "\nSECTION 4: COMPARATIVE ANALYSIS\n";
-            text += `How do articles OVERLAP? ${document.querySelector('[name="overlap"]').value}\n`;
-            text += `How do articles DIVERGE? ${document.querySelector('[name="diverge"]').value}\n`;
+            text += `How do sources OVERLAP? ${document.querySelector('[name="overlap"]').value}\n`;
+            text += `How do sources DIVERGE? ${document.querySelector('[name="diverge"]').value}\n`;
             text += `Evidence Used Similarities: ${document.querySelector('[name="evidenceSimilar"]').value}\n`;
             text += `Evidence Used Differences: ${document.querySelector('[name="evidenceDiff"]').value}\n`;
             text += `Rhetorical Strategies Similarities: ${document.querySelector('[name="rhetoricalSimilar"]').value}\n`;
@@ -730,14 +748,14 @@
             // Section 6
             text += "\nSECTION 6: ARGUMENTATION & RHETORICAL STRATEGIES\n";
             for (let i = 1; i <= 5; i++) {
-                const article = document.querySelector(`[name="article${i}"]`).value;
+                const source = document.querySelector(`[name="source${i}"]`).value;
                 const evidence = document.querySelector(`[name="evidenceType${i}"]`).value;
                 const techniques = document.querySelector(`[name="techniques${i}"]`).value;
                 const effectiveness = document.querySelector(`[name="effectiveness${i}"]`).value;
                 
-                if (article || evidence || techniques || effectiveness) {
-                    text += `\nArticle ${i}:\n`;
-                    text += `Article Title: ${article}\n`;
+                if (source || evidence || techniques || effectiveness) {
+                    text += `\nSource ${i}:\n`;
+                    text += `Source Title: ${source}\n`;
                     text += `Evidence Type: ${evidence}\n`;
                     text += `Persuasive Techniques: ${techniques}\n`;
                     text += `Effectiveness: ${effectiveness}\n`;
@@ -814,19 +832,19 @@
             dataText += `Why this theme: ${document.querySelector('[name="whyTheme"]').value}\n`;
             
             // Section 3
-            dataText += "\nSECTION 3: INDIVIDUAL ARTICLE SUMMARIES\n";
+            dataText += "\nSECTION 3: INDIVIDUAL SOURCE SUMMARIES\n";
             for (let i = 1; i <= 5; i++) {
                 const memberName = document.querySelector(`[name="member${i}Name"]`).value;
-                const articleTitle = document.querySelector(`[name="articleTitle${i}"]`).value;
-                const author = document.querySelector(`[name="author${i}"]`).value;
+                const sourceTitle = document.querySelector(`[name="sourceTitle${i}"]`).value;
+                const creator = document.querySelector(`[name="creator${i}"]`).value;
                 const keyPoints = document.querySelector(`[name="keyPoints${i}"]`).value;
                 const themeConn = document.querySelector(`[name="themeConn${i}"]`).value;
                 
-                if (memberName || articleTitle || author || keyPoints || themeConn) {
+                if (memberName || sourceTitle || creator || keyPoints || themeConn) {
                     dataText += `\nMember ${i}:\n`;
                     dataText += `Member Name: ${memberName}\n`;
-                    dataText += `Article Title: ${articleTitle}\n`;
-                    dataText += `Author(s)/Source: ${author}\n`;
+                    dataText += `Source Title: ${sourceTitle}\n`;
+                    dataText += `Creator/Source: ${creator}\n`;
                     dataText += `Main Argument/Key Points: ${keyPoints}\n`;
                     dataText += `Connection to Shared Theme: ${themeConn}\n`;
                 }
@@ -834,8 +852,8 @@
             
             // Section 4
             dataText += "\nSECTION 4: COMPARATIVE ANALYSIS\n";
-            dataText += `How do articles OVERLAP? ${document.querySelector('[name="overlap"]').value}\n`;
-            dataText += `How do articles DIVERGE? ${document.querySelector('[name="diverge"]').value}\n`;
+            dataText += `How do sources OVERLAP? ${document.querySelector('[name="overlap"]').value}\n`;
+            dataText += `How do sources DIVERGE? ${document.querySelector('[name="diverge"]').value}\n`;
             dataText += `Evidence Used Similarities: ${document.querySelector('[name="evidenceSimilar"]').value}\n`;
             dataText += `Evidence Used Differences: ${document.querySelector('[name="evidenceDiff"]').value}\n`;
             dataText += `Rhetorical Strategies Similarities: ${document.querySelector('[name="rhetoricalSimilar"]').value}\n`;
@@ -864,14 +882,14 @@
             // Section 6
             dataText += "\nSECTION 6: ARGUMENTATION & RHETORICAL STRATEGIES\n";
             for (let i = 1; i <= 5; i++) {
-                const article = document.querySelector(`[name="article${i}"]`).value;
+                const source = document.querySelector(`[name="source${i}"]`).value;
                 const evidence = document.querySelector(`[name="evidenceType${i}"]`).value;
                 const techniques = document.querySelector(`[name="techniques${i}"]`).value;
                 const effectiveness = document.querySelector(`[name="effectiveness${i}"]`).value;
                 
-                if (article || evidence || techniques || effectiveness) {
-                    dataText += `\nArticle ${i}:\n`;
-                    dataText += `Article Title: ${article}\n`;
+                if (source || evidence || techniques || effectiveness) {
+                    dataText += `\nSource ${i}:\n`;
+                    dataText += `Source Title: ${source}\n`;
                     dataText += `Evidence Type: ${evidence}\n`;
                     dataText += `Persuasive Techniques: ${techniques}\n`;
                     dataText += `Effectiveness: ${effectiveness}\n`;
