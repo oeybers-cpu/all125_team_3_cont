@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL 125 - Team Report Planning Worksheet</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .left-column {
+            width: 20%;
+            background-color: #00008B; /* Dark blue */
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .right-column {
+            width: 80%;
+            padding: 20px;
+            background-color: white;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        h1 {
+            color: #00008B;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #FF8C00;
+            padding-bottom: 10px;
+        }
+        
+        .tabs {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+        
+        .tab {
+            display: block;
+            width: 100%;
+            background-color: #00008B;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            text-align: left;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            text-align: left;
+            border-radius: 4px;
+        }
+        
+        .tab:hover {
+            background-color: #1E90FF;
+        }
+        
+        .tab.active {
+            background-color: #FF8C00;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .actions {
+            margin-top: 20px;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        
+        button {
+            background-color: #FF8C00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #FFA500;
+        }
+        
+        button:active {
+            transform: translateY(1px);
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            color: black;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            border-color: #FF8C00;
+            outline: none;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.2);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 8px;
+        }
+        
+        h3 {
+            color: #00008B;
+            margin-top: 0;
+            border-left: 4px solid #FF8C00;
+            padding-left: 10px;
+        }
+        
+        h4 {
+            color: #FF8C00;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        
+        .member-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        
+        .pro-tip {
+            background-color: #FFFACD;
+            padding: 15px;
+            border-left: 4px solid #FF8C00;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        
+        .rubric-reminder {
+            background-color: #E6F7FF;
+            padding: 15px;
+            border-left: 4px solid #00008B;
+            margin-top: 20px;
+        }
+        
+        .section-note {
+            font-size: 14px;
+            color: #666;
+            margin: 10px 0;
+            padding: 8px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <h2>Sections</h2>
+            <ul class="tabs">
+                <li><button class="tab active" data-tab="section1">Group Member Info</button></li>
+                <li><button class="tab" data-tab="section2">Shared Theme</button></li>
+                <li><button class="tab" data-tab="section3">Article Summaries</button></li>
+                <li><button class="tab" data-tab="section4">Comparative Analysis</button></li>
+                <li><button class="tab" data-tab="section5">Perspectives</button></li>
+                <li><button class="tab" data-tab="section6">Argumentation</button></li>
+                <li><button class="tab" data-tab="section7">GenAI & Translanguaging</button></li>
+                <li><button class="tab" data-tab="section8">Structure Outline</button></li>
+                <li><button class="tab" data-tab="section9">Submission Checklist</button></li>
+            </ul>
+        </div>
+        
+        <div class="right-column">
+            <h1>ALL 125 - Team Report Continued</h1>
+            
+            <div id="section1" class="tab-content active">
+                <h3>SECTION 1: GROUP MEMBER INFORMATION</h3>
+                <p class="section-note">Please fill in details for all group members (3-5 members)</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Student ID</th>
+                            <th>Role in Presentation</th>
+                            <th>Discipline/Field of Study</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="name1" placeholder="Name"></td>
+                            <td><input type="text" name="id1" placeholder="Student ID"></td>
+                            <td><input type="text" name="role1" placeholder="Role (e.g., Presenter 1)"></td>
+                            <td><input type="text" name="discipline1" placeholder="Discipline"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name2" placeholder="Name"></td>
+                            <td><input type="text" name="id2" placeholder="Student ID"></td>
+                            <td><input type="text" name="role2" placeholder="Role"></td>
+                            <td><input type="text" name="discipline2" placeholder="Discipline"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name3" placeholder="Name"></td>
+                            <td><input type="text" name="id3" placeholder="Student ID"></td>
+                            <td><input type="text" name="role3" placeholder="Role"></td>
+                            <td><input type="text" name="discipline3" placeholder="Discipline"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name4" placeholder="Name"></td>
+                            <td><input type="text" name="id4" placeholder="Student ID"></td>
+                            <td><input type="text" name="role4" placeholder="Role"></td>
+                            <td><input type="text" name="discipline4" placeholder="Discipline"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name5" placeholder="Name"></td>
+                            <td><input type="text" name="id5" placeholder="Student ID"></td>
+                            <td><input type="text" name="role5" placeholder="Role"></td>
+                            <td><input type="text" name="discipline5" placeholder="Discipline"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="section2" class="tab-content">
+                <h3>SECTION 2: SHARED THEME</h3>
+                <p><strong>Theme Title:</strong></p>
+                <input type="text" name="themeTitle" placeholder="Enter theme title">
+                
+                <p class="section-note">Explain how your group's articles connect to this theme and why it matters</p>
+                <textarea name="whyTheme" rows="4" placeholder="Explain how your group’s articles connect to this theme and why it matters..."></textarea>
+            </div>
+            
+            <div id="section3" class="tab-content">
+                <h3>SECTION 3: INDIVIDUAL ARTICLE SUMMARIES</h3>
+                <p class="section-note">For each member, fill in details below</p>
+                
+                <div class="member-section">
+                    <h4>Member 1</h4>
+                    <p><strong>Member Name:</strong></p>
+                    <input type="text" name="member1Name" placeholder="Member Name">
+                    <p><strong>Article Title:</strong></p>
+                    <input type="text" name="articleTitle1" placeholder="Article Title">
+                    <p><strong>Author(s)/Source:</strong></p>
+                    <input type="text" name="author1" placeholder="Author(s)/Source">
+                    <p><strong>Main Argument/Key Points:</strong></p>
+                    <textarea name="keyPoints1" rows="3" placeholder="Main Argument/Key Points..."></textarea>
+                    <p><strong>Connection to Shared Theme:</strong></p>
+                    <textarea name="themeConn1" rows="3" placeholder="Connection to Shared Theme..."></textarea>
+                </div>
+                
+                <div class="member-section">
+                    <h4>Member 2</h4>
+                    <p><strong>Member Name:</strong></p>
+                    <input type="text" name="member2Name" placeholder="Member Name">
+                    <p><strong>Article Title:</strong></p>
+                    <input type="text" name="articleTitle2" placeholder="Article Title">
+                    <p><strong>Author(s)/Source:</strong></p>
+                    <input type="text" name="author2" placeholder="Author(s)/Source">
+                    <p><strong>Main Argument/Key Points:</strong></p>
+                    <textarea name="keyPoints2" rows="3" placeholder="Main Argument/Key Points..."></textarea>
+                    <p><strong>Connection to Shared Theme:</strong></p>
+                    <textarea name="themeConn2" rows="3" placeholder="Connection to Shared Theme..."></textarea>
+                </div>
+                
+                <div class="member-section">
+                    <h4>Member 3</h4>
+                    <p><strong>Member Name:</strong></p>
+                    <input type="text" name="member3Name" placeholder="Member Name">
+                    <p><strong>Article Title:</strong></p>
+                    <input type="text" name="articleTitle3" placeholder="Article Title">
+                    <p><strong>Author(s)/Source:</strong></p>
+                    <input type="text" name="author3" placeholder="Author(s)/Source">
+                    <p><strong>Main Argument/Key Points:</strong></p>
+                    <textarea name="keyPoints3" rows="3" placeholder="Main Argument/Key Points..."></textarea>
+                    <p><strong>Connection to Shared Theme:</strong></p>
+                    <textarea name="themeConn3" rows="3" placeholder="Connection to Shared Theme..."></textarea>
+                </div>
+                
+                <div class="member-section">
+                    <h4>Member 4</h4>
+                    <p><strong>Member Name:</strong></p>
+                    <input type="text" name="member4Name" placeholder="Member Name">
+                    <p><strong>Article Title:</strong></p>
+                    <input type="text" name="articleTitle4" placeholder="Article Title">
+                    <p><strong>Author(s)/Source:</strong></p>
+                    <input type="text" name="author4" placeholder="Author(s)/Source">
+                    <p><strong>Main Argument/Key Points:</strong></p>
+                    <textarea name="keyPoints4" rows="3" placeholder="Main Argument/Key Points..."></textarea>
+                    <p><strong>Connection to Shared Theme:</strong></p>
+                    <textarea name="themeConn4" rows="3" placeholder="Connection to Shared Theme..."></textarea>
+                </div>
+                
+                <div class="member-section">
+                    <h4>Member 5</h4>
+                    <p><strong>Member Name:</strong></p>
+                    <input type="text" name="member5Name" placeholder="Member Name">
+                    <p><strong>Article Title:</strong></p>
+                    <input type="text" name="articleTitle5" placeholder="Article Title">
+                    <p><strong>Author(s)/Source:</strong></p>
+                    <input type="text" name="author5" placeholder="Author(s)/Source">
+                    <p><strong>Main Argument/Key Points:</strong></p>
+                    <textarea name="keyPoints5" rows="3" placeholder="Main Argument/Key Points..."></textarea>
+                    <p><strong>Connection to Shared Theme:</strong></p>
+                    <textarea name="themeConn5" rows="3" placeholder="Connection to Shared Theme..."></textarea>
+                </div>
+            </div>
+            
+            <div id="section4" class="tab-content">
+                <h3>SECTION 4: COMPARATIVE ANALYSIS</h3>
+                <p><strong>How do articles OVERLAP?</strong></p>
+                <p class="section-note">e.g., shared evidence, similar conclusions, common methodologies</p>
+                <textarea name="overlap" rows="4" placeholder="How do articles overlap?..."></textarea>
+                
+                <p><strong>How do articles DIVERGE?</strong></p>
+                <p class="section-note">e.g., conflicting evidence, different perspectives, unique approaches</p>
+                <textarea name="diverge" rows="4" placeholder="How do articles diverge?..."></textarea>
+                
+                <p><strong>Key Similarities/Differences Summary:</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Similarities</th>
+                            <th>Differences</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Evidence Used</td>
+                            <td><input type="text" name="evidenceSimilar" placeholder="Similarities"></td>
+                            <td><input type="text" name="evidenceDiff" placeholder="Differences"></td>
+                        </tr>
+                        <tr>
+                            <td>Rhetorical Strategies</td>
+                            <td><input type="text" name="rhetoricalSimilar" placeholder="Similarities"></td>
+                            <td><input type="text" name="rhetoricalDiff" placeholder="Differences"></td>
+                        </tr>
+                        <tr>
+                            <td>Cultural/Contextual Focus</td>
+                            <td><input type="text" name="culturalSimilar" placeholder="Similarities"></td>
+                            <td><input type="text" name="culturalDiff" placeholder="Differences"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="section5" class="tab-content">
+                <h3>SECTION 5: PERSONAL, CULTURAL & DISCIPLINARY PERSPECTIVES</h3>
+                <p><strong>How does each member's background shape their interpretation?</strong></p>
+                <p class="section-note">e.g., "As a sociology student, I focus on systemic inequalities in Article X; as a Nigerian, I noticed cultural nuances in Article Y"</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Member</th>
+                            <th>Discipline</th>
+                            <th>Cultural Background</th>
+                            <th>Key Perspective on Theme</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="member1" placeholder="Name"></td>
+                            <td><input type="text" name="discipline1" placeholder="Discipline"></td>
+                            <td><input type="text" name="cultural1" placeholder="Cultural Background"></td>
+                            <td><input type="text" name="perspective1" placeholder="Key Perspective"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="member2" placeholder="Name"></td>
+                            <td><input type="text" name="discipline2" placeholder="Discipline"></td>
+                            <td><input type="text" name="cultural2" placeholder="Cultural Background"></td>
+                            <td><input type="text" name="perspective2" placeholder="Key Perspective"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="member3" placeholder="Name"></td>
+                            <td><input type="text" name="discipline3" placeholder="Discipline"></td>
+                            <td><input type="text" name="cultural3" placeholder="Cultural Background"></td>
+                            <td><input type="text" name="perspective3" placeholder="Key Perspective"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="member4" placeholder="Name"></td>
+                            <td><input type="text" name="discipline4" placeholder="Discipline"></td>
+                            <td><input type="text" name="cultural4" placeholder="Cultural Background"></td>
+                            <td><input type="text" name="perspective4" placeholder="Key Perspective"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="member5" placeholder="Name"></td>
+                            <td><input type="text" name="discipline5" placeholder="Discipline"></td>
+                            <td><input type="text" name="cultural5" placeholder="Cultural Background"></td>
+                            <td><input type="text" name="perspective5" placeholder="Key Perspective"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>How does this diversity strengthen your analysis?</strong></p>
+                <textarea name="diversityStrength" rows="3" placeholder="Explain how the diversity strengthens your analysis..."></textarea>
+            </div>
+            
+            <div id="section6" class="tab-content">
+                <h3>SECTION 6: ARGUMENTATION & RHETORICAL STRATEGIES</h3>
+                <p><strong>Compare how each article builds its argument:</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Article</th>
+                            <th>Evidence Type</th>
+                            <th>Persuasive Techniques</th>
+                            <th>Effectiveness</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="article1" placeholder="Article Title"></td>
+                            <td><input type="text" name="evidenceType1" placeholder="Data, anecdotes, expert quotes"></td>
+                            <td><input type="text" name="techniques1" placeholder="Emotional appeal, logic, credibility"></td>
+                            <td><input type="text" name="effectiveness1" placeholder="High/Medium/Low"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="article2" placeholder="Article Title"></td>
+                            <td><input type="text" name="evidenceType2" placeholder="Data, anecdotes, expert quotes"></td>
+                            <td><input type="text" name="techniques2" placeholder="Emotional appeal, logic, credibility"></td>
+                            <td><input type="text" name="effectiveness2" placeholder="High/Medium/Low"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="article3" placeholder="Article Title"></td>
+                            <td><input type="text" name="evidenceType3" placeholder="Data, anecdotes, expert quotes"></td>
+                            <td><input type="text" name="techniques3" placeholder="Emotional appeal, logic, credibility"></td>
+                            <td><input type="text" name="effectiveness3" placeholder="High/Medium/Low"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="article4" placeholder="Article Title"></td>
+                            <td><input type="text" name="evidenceType4" placeholder="Data, anecdotes, expert quotes"></td>
+                            <td><input type="text" name="techniques4" placeholder="Emotional appeal, logic, credibility"></td>
+                            <td><input type="text" name="effectiveness4" placeholder="High/Medium/Low"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="article5" placeholder="Article Title"></td>
+                            <td><input type="text" name="evidenceType5" placeholder="Data, anecdotes, expert quotes"></td>
+                            <td><input type="text" name="techniques5" placeholder="Emotional appeal, logic, credibility"></td>
+                            <td><input type="text" name="effectiveness5" placeholder="High/Medium/Low"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Which strategies are most impactful? Why?</strong></p>
+                <textarea name="impactfulStrategies" rows="3" placeholder="Explain which strategies are most impactful and why..."></textarea>
+            </div>
+            
+            <div id="section7" class="tab-content">
+                <h3>SECTION 7: GENAI IMAGE & TRANSLANGUAGING</h3>
+                <p><strong>GenAI Image Prompt:</strong></p>
+                <p class="section-note">Be specific! Include style, colors, symbols, and theme relevance.</p>
+                <textarea name="genAIPrompt" rows="4" placeholder="Example: 'A minimalist infographic showing interconnected puzzle pieces in blue and gold, labeled 'Trust,' 'Corruption,' and 'Social Justice,' with a globe in the center. Digital art style.'"></textarea>
+                
+                <p><strong>Image Description & Theme Connection:</strong></p>
+                <textarea name="imageDesc" rows="3" placeholder="Describe the image and how it connects to the theme..."></textarea>
+                
+                <p><strong>Translanguaging Sentence:</strong></p>
+                <p><strong>Primary Language (L1):</strong></p>
+                <input type="text" name="l1" placeholder="Enter sentence in L1">
+                
+                <p><strong>English Translation:</strong></p>
+                <input type="text" name="englishTranslation" placeholder="English translation">
+                
+                <p><strong>Why this adds depth:</strong></p>
+                <textarea name="whyDepth" rows="3" placeholder="Explain how the translanguaging adds depth..."></textarea>
+            </div>
+            
+            <div id="section8" class="tab-content">
+                <h3>SECTION 8: PRESENTATION STRUCTURE OUTLINE</h3>
+                <p class="section-note">Plan slide-by-slide content. Final slide MUST be references.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Slide #</th>
+                            <th>Content</th>
+                            <th>Time Allocation</th>
+                            <th>Presenter(s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="slide1Content" placeholder="Title slide: Group name, theme, member names"></td>
+                            <td><input type="text" name="slide1Time" placeholder="30 sec"></td>
+                            <td><input type="text" name="slide1Presenters" placeholder="All"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" name="slide2Content" placeholder="Introduction: Theme importance + presentation roadmap"></td>
+                            <td><input type="text" name="slide2Time" placeholder="1 min"></td>
+                            <td><input type="text" name="slide2Presenters" placeholder="[Name]"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" name="slide3Content" placeholder="Article summaries (1 slide per article)"></td>
+                            <td><input type="text" name="slide3Time" placeholder="2 min"></td>
+                            <td><input type="text" name="slide3Presenters" placeholder="[Names]"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" name="slide4Content" placeholder="Overlap analysis (key similarities)"></td>
+                            <td><input type="text" name="slide4Time" placeholder="1.5 min"></td>
+                            <td><input type="text" name="slide4Presenters" placeholder="[Name]"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="text" name="slide5Content" placeholder="Divergence analysis (key differences)"></td>
+                            <td><input type="text" name="slide5Time" placeholder="1.5 min"></td>
+                            <td><input type="text" name="slide5Presenters" placeholder="[Name]"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><input type="text" name="slide6Content" placeholder="Personal/cultural/disciplinary perspectives"></td>
+                            <td><input type="text" name="slide6Time" placeholder="1 min"></td>
+                            <td><input type="text" name="slide6Presenters" placeholder="[Names]"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><input type="text" name="slide7Content" placeholder="Argumentation strategies comparison"></td>
+                            <td><input type="text" name="slide7Time" placeholder="1 min"></td>
+                            <td><input type="text" name="slide7Presenters" placeholder="[Name]"></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><input type="text" name="slide8Content" placeholder="GenAI image + translanguaging sentence"></td>
+                            <td><input type="text" name="slide8Time" placeholder="1 min"></td>
+                            <td><input type="text" name="slide8Presenters" placeholder="[Name]"></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><input type="text" name="slide9Content" placeholder="Conclusion: Key insights, real-world implications"></td>
+                            <td><input type="text" name="slide9Time" placeholder="1 min"></td>
+                            <td><input type="text" name="slide9Presenters" placeholder="All"></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><input type="text" name="slide10Content" placeholder="REFERENCES (FINAL SLIDE)"></td>
+                            <td><input type="text" name="slide10Time" placeholder="0.5 min"></td>
+                            <td><input type="text" name="slide10Presenters" placeholder="[Name]"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="pro-tip"><strong>PRO TIP:</strong> Practice timing! Use a timer during rehearsals.</p>
+            </div>
+            
+            <div id="section9" class="tab-content">
+                <h3>SECTION 9: SUBMISSION CHECKLIST</h3>
+                <ul>
+                    <li><input type="checkbox" name="check1"> PowerPoint outline submitted to ClickUP before deadline</li>
+                    <li><input type="checkbox" name="check2"> Presentation recorded (≤10 minutes)</li>
+                    <li><input type="checkbox" name="check3"> Recording uploaded to designated platform</li>
+                    <li><input type="checkbox" name="check4"> GenAI prompt and translanguaging sentence included in slides</li>
+                    <li><input type="checkbox" name="check5"> All group members appear in recording</li>
+                    <li><input type="checkbox" name="check6"> References slide formatted correctly (APA/MLA)</li>
+                </ul>
+                
+                <div class="rubric-reminder">
+                    <p><strong>RUBRIC REMINDER:</strong> Ensure your plan covers all criteria (Interpretation, Personal Reflection, Argumentation, GenAI/Image, Structure).</p>
+                </div>
+            </div>
+            
+            <div class="actions">
+                <button id="saveBtn">Save to Browser</button>
+                <button id="copyBtn">Copy to Clipboard</button>
+                <button id="downloadBtn">Download as TXT</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                button.classList.add('active');
+                
+                // Hide all tab-content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show selected tab-content
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Save functionality
+        document.getElementById('saveBtn').addEventListener('click', () => {
+            const data = {};
+            document.querySelectorAll('input, textarea').forEach(field => {
+                if (field.name) {
+                    data[field.name] = field.value;
+                }
+            });
+            localStorage.setItem('all125Data', JSON.stringify(data));
+            alert('Saved to browser storage!');
+        });
+        
+        // Copy to clipboard functionality
+        document.getElementById('copyBtn').addEventListener('click', () => {
+            let text = "ALL 125 - Team Report Planning Worksheet\n\n";
+            
+            // Section 1
+            text += "SECTION 1: GROUP MEMBER INFORMATION\n";
+            for (let i = 1; i <= 5; i++) {
+                const name = document.querySelector(`[name="name${i}"]`).value;
+                const id = document.querySelector(`[name="id${i}"]`).value;
+                const role = document.querySelector(`[name="role${i}"]`).value;
+                const discipline = document.querySelector(`[name="discipline${i}"]`).value;
+                if (name || id || role || discipline) {
+                    text += `\nMember ${i}:\n`;
+                    text += `Name: ${name}\n`;
+                    text += `Student ID: ${id}\n`;
+                    text += `Role: ${role}\n`;
+                    text += `Discipline: ${discipline}\n`;
+                }
+            }
+            
+            // Section 2
+            text += "\nSECTION 2: SHARED THEME\n";
+            text += `Theme Title: ${document.querySelector('[name="themeTitle"]').value}\n`;
+            text += `Why this theme: ${document.querySelector('[name="whyTheme"]').value}\n`;
+            
+            // Section 3
+            text += "\nSECTION 3: INDIVIDUAL ARTICLE SUMMARIES\n";
+            for (let i = 1; i <= 5; i++) {
+                const memberName = document.querySelector(`[name="member${i}Name"]`).value;
+                const articleTitle = document.querySelector(`[name="articleTitle${i}"]`).value;
+                const author = document.querySelector(`[name="author${i}"]`).value;
+                const keyPoints = document.querySelector(`[name="keyPoints${i}"]`).value;
+                const themeConn = document.querySelector(`[name="themeConn${i}"]`).value;
+                
+                if (memberName || articleTitle || author || keyPoints || themeConn) {
+                    text += `\nMember ${i}:\n`;
+                    text += `Member Name: ${memberName}\n`;
+                    text += `Article Title: ${articleTitle}\n`;
+                    text += `Author(s)/Source: ${author}\n`;
+                    text += `Main Argument/Key Points: ${keyPoints}\n`;
+                    text += `Connection to Shared Theme: ${themeConn}\n`;
+                }
+            }
+            
+            // Section 4
+            text += "\nSECTION 4: COMPARATIVE ANALYSIS\n";
+            text += `How do articles OVERLAP? ${document.querySelector('[name="overlap"]').value}\n`;
+            text += `How do articles DIVERGE? ${document.querySelector('[name="diverge"]').value}\n`;
+            text += `Evidence Used Similarities: ${document.querySelector('[name="evidenceSimilar"]').value}\n`;
+            text += `Evidence Used Differences: ${document.querySelector('[name="evidenceDiff"]').value}\n`;
+            text += `Rhetorical Strategies Similarities: ${document.querySelector('[name="rhetoricalSimilar"]').value}\n`;
+            text += `Rhetorical Strategies Differences: ${document.querySelector('[name="rhetoricalDiff"]').value}\n`;
+            text += `Cultural/Contextual Focus Similarities: ${document.querySelector('[name="culturalSimilar"]').value}\n`;
+            text += `Cultural/Contextual Focus Differences: ${document.querySelector('[name="culturalDiff"]').value}\n`;
+            
+            // Section 5
+            text += "\nSECTION 5: PERSONAL, CULTURAL & DISCIPLINARY PERSPECTIVES\n";
+            for (let i = 1; i <= 5; i++) {
+                const member = document.querySelector(`[name="member${i}"]`).value;
+                const discipline = document.querySelector(`[name="discipline${i}"]`).value;
+                const cultural = document.querySelector(`[name="cultural${i}"]`).value;
+                const perspective = document.querySelector(`[name="perspective${i}"]`).value;
+                
+                if (member || discipline || cultural || perspective) {
+                    text += `\nMember ${i}:\n`;
+                    text += `Member: ${member}\n`;
+                    text += `Discipline: ${discipline}\n`;
+                    text += `Cultural Background: ${cultural}\n`;
+                    text += `Key Perspective: ${perspective}\n`;
+                }
+            }
+            text += `How diversity strengthens analysis: ${document.querySelector('[name="diversityStrength"]').value}\n`;
+            
+            // Section 6
+            text += "\nSECTION 6: ARGUMENTATION & RHETORICAL STRATEGIES\n";
+            for (let i = 1; i <= 5; i++) {
+                const article = document.querySelector(`[name="article${i}"]`).value;
+                const evidence = document.querySelector(`[name="evidenceType${i}"]`).value;
+                const techniques = document.querySelector(`[name="techniques${i}"]`).value;
+                const effectiveness = document.querySelector(`[name="effectiveness${i}"]`).value;
+                
+                if (article || evidence || techniques || effectiveness) {
+                    text += `\nArticle ${i}:\n`;
+                    text += `Article Title: ${article}\n`;
+                    text += `Evidence Type: ${evidence}\n`;
+                    text += `Persuasive Techniques: ${techniques}\n`;
+                    text += `Effectiveness: ${effectiveness}\n`;
+                }
+            }
+            text += `Most impactful strategies: ${document.querySelector('[name="impactfulStrategies"]').value}\n`;
+            
+            // Section 7
+            text += "\nSECTION 7: GENAI IMAGE & TRANSLANGUAGING\n";
+            text += `GenAI Image Prompt: ${document.querySelector('[name="genAIPrompt"]').value}\n`;
+            text += `Image Description: ${document.querySelector('[name="imageDesc"]').value}\n`;
+            text += `Translanguaging (L1): ${document.querySelector('[name="l1"]').value}\n`;
+            text += `English Translation: ${document.querySelector('[name="englishTranslation"]').value}\n`;
+            text += `Why this adds depth: ${document.querySelector('[name="whyDepth"]').value}\n`;
+            
+            // Section 8
+            text += "\nSECTION 8: PRESENTATION STRUCTURE OUTLINE\n";
+            for (let i = 1; i <= 10; i++) {
+                const content = document.querySelector(`[name="slide${i}Content"]`).value;
+                const time = document.querySelector(`[name="slide${i}Time"]`).value;
+                const presenters = document.querySelector(`[name="slide${i}Presenters"]`).value;
+                
+                if (content || time || presenters) {
+                    text += `\nSlide ${i}:\n`;
+                    text += `Content: ${content}\n`;
+                    text += `Time: ${time}\n`;
+                    text += `Presenters: ${presenters}\n`;
+                }
+            }
+            
+            // Section 9
+            text += "\nSECTION 9: SUBMISSION CHECKLIST\n";
+            for (let i = 1; i <= 6; i++) {
+                const checked = document.querySelector(`[name="check${i}"]`).checked ? "✓" : " ";
+                text += `[${checked}] ${document.querySelector(`[name="check${i}"]`).nextElementSibling.textContent.trim()}\n`;
+            }
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard!');
+            });
+        });
+        
+        // Download as TXT functionality
+        document.getElementById('downloadBtn').addEventListener('click', () => {
+            let text = "ALL 125 - Team Report Planning Worksheet\n\n";
+            
+            // Same data collection as Copy to Clipboard, then create download
+            // ... (same data collection code as above)
+            
+            // For brevity, I'll use the same data collection as in copyBtn
+            // In a real implementation, this would be extracted to a function
+            let dataText = "ALL 125 - Team Report Planning Worksheet\n\n";
+            
+            // Section 1
+            dataText += "SECTION 1: GROUP MEMBER INFORMATION\n";
+            for (let i = 1; i <= 5; i++) {
+                const name = document.querySelector(`[name="name${i}"]`).value;
+                const id = document.querySelector(`[name="id${i}"]`).value;
+                const role = document.querySelector(`[name="role${i}"]`).value;
+                const discipline = document.querySelector(`[name="discipline${i}"]`).value;
+                if (name || id || role || discipline) {
+                    dataText += `\nMember ${i}:\n`;
+                    dataText += `Name: ${name}\n`;
+                    dataText += `Student ID: ${id}\n`;
+                    dataText += `Role: ${role}\n`;
+                    dataText += `Discipline: ${discipline}\n`;
+                }
+            }
+            
+            // Section 2
+            dataText += "\nSECTION 2: SHARED THEME\n";
+            dataText += `Theme Title: ${document.querySelector('[name="themeTitle"]').value}\n`;
+            dataText += `Why this theme: ${document.querySelector('[name="whyTheme"]').value}\n`;
+            
+            // Section 3
+            dataText += "\nSECTION 3: INDIVIDUAL ARTICLE SUMMARIES\n";
+            for (let i = 1; i <= 5; i++) {
+                const memberName = document.querySelector(`[name="member${i}Name"]`).value;
+                const articleTitle = document.querySelector(`[name="articleTitle${i}"]`).value;
+                const author = document.querySelector(`[name="author${i}"]`).value;
+                const keyPoints = document.querySelector(`[name="keyPoints${i}"]`).value;
+                const themeConn = document.querySelector(`[name="themeConn${i}"]`).value;
+                
+                if (memberName || articleTitle || author || keyPoints || themeConn) {
+                    dataText += `\nMember ${i}:\n`;
+                    dataText += `Member Name: ${memberName}\n`;
+                    dataText += `Article Title: ${articleTitle}\n`;
+                    dataText += `Author(s)/Source: ${author}\n`;
+                    dataText += `Main Argument/Key Points: ${keyPoints}\n`;
+                    dataText += `Connection to Shared Theme: ${themeConn}\n`;
+                }
+            }
+            
+            // Section 4
+            dataText += "\nSECTION 4: COMPARATIVE ANALYSIS\n";
+            dataText += `How do articles OVERLAP? ${document.querySelector('[name="overlap"]').value}\n`;
+            dataText += `How do articles DIVERGE? ${document.querySelector('[name="diverge"]').value}\n`;
+            dataText += `Evidence Used Similarities: ${document.querySelector('[name="evidenceSimilar"]').value}\n`;
+            dataText += `Evidence Used Differences: ${document.querySelector('[name="evidenceDiff"]').value}\n`;
+            dataText += `Rhetorical Strategies Similarities: ${document.querySelector('[name="rhetoricalSimilar"]').value}\n`;
+            dataText += `Rhetorical Strategies Differences: ${document.querySelector('[name="rhetoricalDiff"]').value}\n`;
+            dataText += `Cultural/Contextual Focus Similarities: ${document.querySelector('[name="culturalSimilar"]').value}\n`;
+            dataText += `Cultural/Contextual Focus Differences: ${document.querySelector('[name="culturalDiff"]').value}\n`;
+            
+            // Section 5
+            dataText += "\nSECTION 5: PERSONAL, CULTURAL & DISCIPLINARY PERSPECTIVES\n";
+            for (let i = 1; i <= 5; i++) {
+                const member = document.querySelector(`[name="member${i}"]`).value;
+                const discipline = document.querySelector(`[name="discipline${i}"]`).value;
+                const cultural = document.querySelector(`[name="cultural${i}"]`).value;
+                const perspective = document.querySelector(`[name="perspective${i}"]`).value;
+                
+                if (member || discipline || cultural || perspective) {
+                    dataText += `\nMember ${i}:\n`;
+                    dataText += `Member: ${member}\n`;
+                    dataText += `Discipline: ${discipline}\n`;
+                    dataText += `Cultural Background: ${cultural}\n`;
+                    dataText += `Key Perspective: ${perspective}\n`;
+                }
+            }
+            dataText += `How diversity strengthens analysis: ${document.querySelector('[name="diversityStrength"]').value}\n`;
+            
+            // Section 6
+            dataText += "\nSECTION 6: ARGUMENTATION & RHETORICAL STRATEGIES\n";
+            for (let i = 1; i <= 5; i++) {
+                const article = document.querySelector(`[name="article${i}"]`).value;
+                const evidence = document.querySelector(`[name="evidenceType${i}"]`).value;
+                const techniques = document.querySelector(`[name="techniques${i}"]`).value;
+                const effectiveness = document.querySelector(`[name="effectiveness${i}"]`).value;
+                
+                if (article || evidence || techniques || effectiveness) {
+                    dataText += `\nArticle ${i}:\n`;
+                    dataText += `Article Title: ${article}\n`;
+                    dataText += `Evidence Type: ${evidence}\n`;
+                    dataText += `Persuasive Techniques: ${techniques}\n`;
+                    dataText += `Effectiveness: ${effectiveness}\n`;
+                }
+            }
+            dataText += `Most impactful strategies: ${document.querySelector('[name="impactfulStrategies"]').value}\n`;
+            
+            // Section 7
+            dataText += "\nSECTION 7: GENAI IMAGE & TRANSLANGUAGING\n";
+            dataText += `GenAI Image Prompt: ${document.querySelector('[name="genAIPrompt"]').value}\n`;
+            dataText += `Image Description: ${document.querySelector('[name="imageDesc"]').value}\n`;
+            dataText += `Translanguaging (L1): ${document.querySelector('[name="l1"]').value}\n`;
+            dataText += `English Translation: ${document.querySelector('[name="englishTranslation"]').value}\n`;
+            dataText += `Why this adds depth: ${document.querySelector('[name="whyDepth"]').value}\n`;
+            
+            // Section 8
+            dataText += "\nSECTION 8: PRESENTATION STRUCTURE OUTLINE\n";
+            for (let i = 1; i <= 10; i++) {
+                const content = document.querySelector(`[name="slide${i}Content"]`).value;
+                const time = document.querySelector(`[name="slide${i}Time"]`).value;
+                const presenters = document.querySelector(`[name="slide${i}Presenters"]`).value;
+                
+                if (content || time || presenters) {
+                    dataText += `\nSlide ${i}:\n`;
+                    dataText += `Content: ${content}\n`;
+                    dataText += `Time: ${time}\n`;
+                    dataText += `Presenters: ${presenters}\n`;
+                }
+            }
+            
+            // Section 9
+            dataText += "\nSECTION 9: SUBMISSION CHECKLIST\n";
+            for (let i = 1; i <= 6; i++) {
+                const checked = document.querySelector(`[name="check${i}"]`).checked ? "✓" : " ";
+                dataText += `[${checked}] ${document.querySelector(`[name="check${i}"]`).nextElementSibling.textContent.trim()}\n`;
+            }
+            
+            // Create and download file
+            const blob = new Blob([dataText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'all125_team_report.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+        
+        // Load saved data on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedData = localStorage.getItem('all125Data');
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                Object.keys(data).forEach(key => {
+                    const field = document.querySelector(`[name="${key}"]`);
+                    if (field) {
+                        if (field.type === 'checkbox') {
+                            field.checked = data[key] === 'true';
+                        } else {
+                            field.value = data[key];
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
